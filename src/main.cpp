@@ -92,7 +92,7 @@ int main() {
                 window.close();
             }
 
-            if (event.type == event.KeyReleased) {
+            if (event.type == sf::Event::KeyReleased) {
                 switch (event.key.code) {
                     case sf::Keyboard::Escape:
                         window.close();

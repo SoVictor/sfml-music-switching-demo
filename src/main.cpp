@@ -29,7 +29,11 @@ const float kMusicVolumePerTick = 0.5F;
 
 class MusicController {
 public:
-    MusicController() : active_idx_(0), inactive_idx(1) {}
+    MusicController() : active_idx_(0), inactive_idx(1) {
+        for (auto& music : music_) {
+            music.setLoop(true);
+        }
+    }
 
     void Play(const std::string& filename) {
         if (filename_ == filename) {
